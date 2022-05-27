@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Smart Mini Greenhouse - Control</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <i class="fas fa-burn"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Smart Mini Greenhouse</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Interface
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item active">
+                <a class="nav-link" href="buttons.html">
+                  <i class="fas fa-fw fa-screwdriver"></i>
+                  <span>Button</span></a
+                >
+              </li>
+      
+            <!-- Nav Item - Utilities Collapse Menu -->
+            
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Addons
+            </div>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Charts</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="record.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Record</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Smart Mini Greenhouse</span>
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-4 text-gray-800">Manual Control</h1>
+                    <div class="row">
+                        <div class="col-lg-12">
+
+                            <!-- Circle Buttons -->
+                            <div class="card shadow mb-auto">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Manual Control</h6>
+                                </div>
+                            <!-- Circle Buttons
+                              <div class="card-body p-3">
+                                <div class="row">
+                                  <div class="col-lg-3 col-sm-6 col-12">
+                                    <button class="btn btn-outline-success">Kipas ON</button>
+                                  </div>
+                                  <div class="col-lg-3 col-sm-6 col-12 mt-sm-0 mt-2">
+                                    <button class="btn btn-outline-success">Lampu Grow Light ON</button>
+                                  </div>
+                                  <div class="col-lg-3 col-sm-6 col-12 mt-lg-0 mt-2">
+                                    <button class="btn btn-outline-success">Pompa Air ON</button>
+                                  </div>
+                                  <div class="col-lg-3 col-sm-6 col-12 mt-lg-0 mt-2">
+                                    <button class="btn btn-outline-success">Humidifier ON</button>
+                                  </div>
+                                </div>
+                              </div>
+                            <div class="d-grid gap-2 p-3">
+                                <div class="row">
+                                <div class="col-lg-3 col-sm-6 col-12">
+                                  <button class="btn btn-outline-warning">Kipas OFF</button>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 mt-sm-0 mt-2">
+                                  <button class="btn btn-outline-warning">Lampu Grow Light OFF</button>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 mt-lg-0 mt-2">
+                                  <button class="btn btn-outline-warning">Pompa Air OFF</button>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 mt-lg-0 mt-2">
+                                  <button class="btn btn-outline-warning">Humidifier OFF</button>
+                                </div>
+                            </div>
+                            </div>
+                            <hr>
+                             
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">ON/OFF Auto Control</h6>
+                            </div>
+                            -->
+                            <div class="card-body p-3">
+                              <div class="row">
+                                <div class="col-lg-6">
+                                  <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitches">
+                                    <label class="custom-control-label" for="customSwitches">Auto Control</label>
+                                  </div>
+                              
+                                  <div class="d-grid gap-2 p-3"></div>
+                                  <div class="row g-3">
+                                  </div>
+                                  <div class="col-lg-3 col-sm-6 col-12">
+                                    <button class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">ON</button>  
+                                    <button class="btn btn-outline-warning">OFF</button>
+                                  </div> 
+                                </div>
+                                
+                                <div class="col-lg-6">
+                                  <!--Nilai Input EC-->
+                                    <label class="visually-hidden">Input Values EC</label>
+                                    <div class="row">
+                                      <div class="col">
+                                        <div class="input-group">
+                                          <span class="input-group-text ">EC</span>
+                                          <input type="number" min="0" max="2" class="form-control" placeholder="Min EC">
+                                          <input type="number" min="2" max="5" class="form-control" placeholder="Max EC">
+                                          <div class="col-lg-3 col-sm-6 col-12 mt-lg-0 mt-2">
+                                          <button class="btn btn-outline-success">OK</button>
+                                          </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                    <!--Nilai Input pH-->
+                                    <label class="visually-hidden" for="nilai PH">Input Values pH </label>
+                                    <div class="input-group">
+                                    <div class="input-group-text">pH</div>
+                                    <input type="number" min="0" max="2" class="form-control" id="nilai PH" placeholder="Min pH">
+                                    <input type="number" min="2" max="5" class="form-control" id="nilai PH" placeholder="Max pH">
+                                        <div class="col-lg-3 col-sm-6 col-12 mt-lg-0 mt-2">
+                                        <button class="btn btn-outline-success">OK</button>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+
+                           
+                <!-- /.container-fluid -->
+          
+              <div class="card-body p-3">
+                <div class="row">
+
+                      <div class="col-lg-3">
+                        <div class="card card-chart">
+                          <div class="card-header">
+                            <h5 class="card-category text-primary">Manual Control</h5>
+                          </div>
+                          <div class="card-body">
+                            <img src="img/fan.png" class="img-fluid" alt="Cinque Terre">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end"></div>
+                            <h3 class="text-center">Fan</h3>
+                            <div class="chart-area">
+                              
+                              <div class="col-6 mx-auto">
+                                <div class="custom-control custom-switch">
+                                  <input type="checkbox" class="custom-control-input" id="fan">
+                                  <label class="custom-control-label" for="fan">Fan Button</label>
+                                </div>
+                              </div>
+                            </div> 
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="card card-chart">
+                          <div class="card-header">
+                            <h5 class="card-category text-primary">Manual Control</h5>
+                          </div>
+                          <div class="card-body">
+                            <img src="img/lamp.png" class="img-fluid" alt="Cinque Terre">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end"></div>
+                            <h3 class="text-center">Growlight</h3>
+                            <div class="chart-area">
+                              
+                              <div class="col-6 mx-auto">
+                                <div class="custom-control custom-switch">
+                                  <input type="checkbox" class="custom-control-input" id="lamp">
+                                  <label class="custom-control-label" for="lamp">Growlight Button</label>
+                                </div>
+                              </div>
+                            </div>   
+                          </div>
+                        </div>
+                      </div>     
+
+                      <div class="col-lg-3">
+                        <div class="card card-chart">
+                          <div class="card-header">
+                            <h5 class="card-category text-primary">Manual Control</h5>
+                          </div>
+                          <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end"></div>
+                            <img src="img/waterpump2.png" class="img-fluid" alt="Cinque Terre">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end"></div>
+                            <h3 class="text-center">Water Pump</h3>
+                            <div class="chart-area">
+                             
+                              <div class="col-6 mx-auto">
+                                <div class="custom-control custom-switch">
+                                  <input type="checkbox" class="custom-control-input" id="waterpump">
+                                  <label class="custom-control-label" for="waterpump">waterpump Button</label>
+                                </div>
+                              </div>
+                            </div> 
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="card card-chart">
+                          <div class="card-header">
+                            <h5 class="card-category text-primary">Manual Control</h5>
+                          </div>
+                          <div class="card-body">
+                            <img src="img/humidifier.png" class="img-fluid" alt="Cinque Terre">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end"></div>
+                            <h3 class="text-center">Humidifier</h3>
+                            <div class="chart-area">
+                             
+                              <div class="col-6 mx-auto">
+                                <div class="custom-control custom-switch">
+                                  <input type="checkbox" class="custom-control-input" id="humidifier">
+                                  <label class="custom-control-label" for="humidifier">Humidifier Button</label>
+                                </div>
+                              </div>
+                            </div>                  
+                          </div>
+                        </div>
+                      </div>
+                    
+
+            <!-- End of Main Content -->
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                  <div class="copyright text-center my-auto">
+                    <span>Tugas Akhir &copy; Smart Mini Greenhouse</span>
+                  </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+            </div>
+          <!-- End of Content Wrapper -->
+          </div>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">Tekan "Logout" untuk keluar!</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</html>
